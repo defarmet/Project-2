@@ -1,3 +1,58 @@
 .list-group-item {
   line-height: 2.5;
 }
+body {
+  background: #333;
+  color: #fff;  
+}
+
+.navbar {
+  border-bottom: #6200b3 3px solid;
+  opacity: 0.8;
+}
+
+#login-button {
+  background-color: #6200b3 !important;
+  }
+
+#home-section {
+  background: url(/img/book_fantasyimage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height:700px;
+  background: rgba(0,0,0,0.7);
+}
+
+#home-section .home-inner {
+  padding-top: 150px;
+}
+
+#home-section .card-form {
+  opacity: 0.8;
+}
+
+#home-section .fas, #create-section .fas {
+  color: #6200b3;
+  background: #6200b3;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#explore-section .fas, #share-section .fas {
+  background: #333333;
+  color: #fff;
+  padding: 5px; 
+  border-radius: 5px;
+}
+#contact-button {
+  background-color: #6200b3 !important;
+  }
