@@ -1,24 +1,45 @@
+var Sequelize = require("sequelize");
 var db = require("../models");
 
+// Routes
+
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+
+ 
+  // Get all books
+
+  app.get("/api/books", function(req, res) {
+    db.Book.findAll()
+    .then(function(books){
+      console.log(books);
+    })
+  })
+  // Add a book
+  app.post("/api/new", function(req, res) {
+    console.log("Book Data:");
+    console.log(req.body);
+    db.Book.create({
+      title: req.body.title,
+      author: req.body.author,
+      genre: req.body.genre,
+      pages: req.body.pages
+    }).then(function(results) {
+      console.log("request made");
+      res.json(results);
+      
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // Delete a book
+  app.delete("/api/book/:id", function(req, res) {
+    console.log("Book ID:");
+    console.log(req.params.id);
+    Book.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      res.json(results);
     });
   });
 };

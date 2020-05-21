@@ -1,0 +1,36 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>LOG A BOOK</h1>
+      <p>This should be a book that YOU READ completly and can be verified by test, parent, or teacher</p>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/add" method="POST">
+        <div class="input-group">
+          <label for="title">Book Title</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="Full Book Name"
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="author">Author Name</label>
+          <input type="text" name="author" id="author" class="input-box" placeholder="Full Name"
+          maxlength="100" value={{author}}>
+        </div> 
+        <div class="input-group">
+          <label for="genre">Genre</label>
+          <input type="text" name="genre" id="genre" class="input-box" placeholder="eg. science fiction, fantasy, historical fiction"
+          maxlength="100" value={{genre}}>
+        </div>
+        <div class="input-group">
+          <label for="pages">Pages</label>
+          <input type="number" name="pages" id="pages" class="input-box" placeholder="eg. 250, 500, 1000" value={{pages}}>
+        </div>
+
+        <input type="submit" value="Log It!" id= "add-btn" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>
+  <script src="/js/index.js"></script>
+<script src="/js/useradd.js"></script>
