@@ -1,0 +1,40 @@
+  <section id="search" class="container">
+    <div class="form-wrap">
+      <h1>Search a Book</h1>
+      <p>Search by Title or Author</p>
+      {{#each errors}}
+      <div class="error">
+        <p>{{text}}</p>
+      </div>
+    {{/each}}
+      <form action="/search" method="GET">
+        <div class="input-group">
+          <label for="title">Book Title</label>
+          <input type="text" name="title-search" id="title-search" class="input-box" placeholder="Full Book Name"
+            maxlength="100" value={{title-search}}>
+        </div>
+        <div class="input-group">
+          <label for="author">Author Name</label>
+          <input type="text" name="author-search" id="author-search" class="input-box" placeholder="Authors Full Name"
+          maxlength="100" value={{author-search}}>
+        </div> 
+              <!--submit button, clear and add to List -->
+              <input type="submit" value="Search" id= "search-btn" class="btn btn-reverse">
+              <input type="submit" value="Clear Results" id= "clear-btn" class="btn btn-reverse">
+    
+              </form>
+            </div>
+          </section>
+
+          
+  <!-- Retrieved data will be dumped here -->
+  <div id="search-results"></div>
+
+
+      </div>
+    </div>
+
+    <script src="/js/search.js"></script>
+
+
+

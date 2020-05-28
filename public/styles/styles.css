@@ -98,3 +98,17 @@ label {
   width: 100%;
   margin-bottom: 1.2rem;
 }
+
+#search-btn {
+  background-color: #6200b3;
+  color: #fff;
+}
+
+#clear-btn {
+  background-color: #6200b3;
+  color: #fff;
+}
+#add-search-btn {
+  background-color: #6200b3;
+  color: #fff;
+}
