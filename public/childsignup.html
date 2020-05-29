@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Create Child Account</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	</head>
+
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: black;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+
+		.container {
+			padding: 16px;
+			background-color: white;
+		}
+
+
+		input[type=text], input[type=password] {
+			width: 100%;
+			padding: 15px;
+			margin: 5px 0 22px 0;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+		}
+
+		input[type=text]:focus, input[type=password]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+
+
+		hr {
+
+			margin-bottom: 25px;
+		}
+
+
+		.registerbtn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 16px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			opacity: 0.9;
+		}
+
+		.registerbtn:hover {
+			opacity: 1;
+		}
+
+		/
+		a {
+			color: blue;
+		}
+
+
+		.signin {
+			background-color: #f1f1f1;
+			text-align: center;
+		}
+		.container {
+			padding: 16px;
+			background-color: white;
+			background-image: url("img/parch1.jpg");
+			background-size: contain;
+		}
+	</style>
+	<body>
+	<form action="/createuser" method="post">
+		<div class="container">
+		<h1>Register</h1>
+		<p>Please fill in this form to create parent account </p>
+		<hr>
+
+			<label for="childName"><b>Child Name</b></label>
+			<input type="text" placeholder="Enter Child's name" name="childName" required>
+
+			<label for="username"><b>Child User Name</b></label>
+			<input type="text" placeholder="User Name for child" name="username" required>
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+
+			<label for="psw-repeat"><b>Repeat Password</b></label>
+			<input type="password" placeholder="Repeat Password" name="repeat" required>
+		<hr>
+		<button type="submit" id="registerbtn">Register</button>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<div class="w3-black">
+	<!-- Icon Bar (Sidebar - hidden on small screens) -->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+		<!-- Avatar image in top left corner -->
+		<img src="img/wiz1.png" style="width:100%">
+		<a href="student.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+			<i class="fa fa-home w3-xxlarge"></i>
+			<p>House Common Room</p>
+		</a>
+		<a href="/add" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-book w3-xxlarge"></i>
+			<p>Tomes of Knowledge </p>
+		</a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-eye w3-xxlarge"></i>
+			<p>Search for new Magic</p>
+		</a>
+	</nav>
+
+	<!-- Page Content -->
+	<div  class="w3-padding-large" id="main">
+	<!-- Header/Home -->
+	<header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+		<h1 class="w3-jumbo"><span class="w3-hide-small">You're a Wizard, {{username}} <h1 id="username"></h1></span></h1>
+		<p>Welcome and Explore the magic of reading!</p>
+
+	</header>
+
+	{{#each books}}
+		<p>{{this.title}}</p>
+	{{/each}}
+
+    <!-- Footer -->
+	<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+		<p class="w3-medium">Powered by Kidz Read</a></p>
+  <!-- End footer -->
+	</footer>
+
+<!-- END PAGE CONTENT -->
+	</div>
+</div>
