@@ -93,8 +93,8 @@ module.exports = function(app) {
 			var username = req.body.username;
 			var password = req.body.password;
 			var parent = null;
-			if (req.user && req.user.parent)
-				parent = req.user.username;
+			if (req.body.childName)
+				parent = req.body.childName;
 
 			console.log("here");
 			db.User.create({
