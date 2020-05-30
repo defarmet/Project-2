@@ -93,7 +93,7 @@ module.exports = function(app) {
 			var username = req.body.username;
 			var password = req.body.password;
 			var parent = null;
-			if (req.user)
+			if (req.user.parent)
 				parent = req.user.username;
 
 			console.log("here");
